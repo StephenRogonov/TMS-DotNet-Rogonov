@@ -131,7 +131,7 @@ namespace Homework_1
                     Console.WriteLine($"{digit} day of the week is {day}");
                     break;
                 default:
-                    Console.WriteLine("You have typed a non-numeric value or enterd value is out of range!");
+                    Console.WriteLine("You have typed a non-numeric value or entered value is out of range!");
                     break;
             }            
         }
