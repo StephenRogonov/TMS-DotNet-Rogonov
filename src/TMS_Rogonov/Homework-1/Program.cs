@@ -18,7 +18,20 @@ namespace Homework_1
 
         static void Main(string[] args)
         {
-            //Write Current day of the weeek with its number
+            //Write Current day of the weeek with its number            
+            CurrentDay();
+
+            //Return number of week day by its name
+            Console.WriteLine("Enter the Name of week day to know its number:");
+            Console.WriteLine(WDNumberByName(Console.ReadLine()));
+                        
+            //Return week day name by its number
+            Console.WriteLine("Enter the number of week day (1-7) to know its name:");
+            Console.WriteLine(WDNameByNumber(Convert.ToInt32(Console.ReadLine())));            
+        }
+
+        static void CurrentDay()
+        {
             string today = DateTime.Now.DayOfWeek.ToString();
             string number;
             if (today == WeekDays.Monday.ToString())
@@ -51,89 +64,80 @@ namespace Homework_1
             }
 
             Console.WriteLine($"Today is {today}, {number} day of thee week.");
+        }
 
-            //Return number of week day by its name
-            Console.WriteLine("Type the Name of week day to know its number:");
-            string day = Console.ReadLine();
+        static string WDNumberByName(string day)
+        {            
             day = day.First().ToString().ToUpper() + day.Substring(1).ToLower();
-            int digit = 0;
             if (day == "Monday")
             {
-                digit = (int)WeekDays.Monday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Monday;
+                return $"{day} is the {digit}st day of the week.";
             }
             else if (day == "Tuesday")
             {
-                digit = (int)WeekDays.Tuesday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Tuesday;
+                return $"{day} is the {digit}nd day of the week.";
             }
             else if (day == "Wednesday")
             {
-                digit = (int)WeekDays.Wednesday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Wednesday;
+                return $"{day} is the {digit}rd day of the week.";
             }
             else if (day == "Thursday")
             {
-                digit = (int)WeekDays.Thursday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Thursday;
+                return $"{day} is the {digit}th day of the week.";
             }
             else if (day == "Friday")
             {
-                digit = (int)WeekDays.Friday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Friday;
+                return$"{day} is the {digit}th day of the week.";
             }
             else if (day == "Saturday")
             {
-                digit = (int)WeekDays.Saturday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Saturday;
+                return $"{day} is the {digit}th day of the week.";
             }
             else if (day == "Sunday")
             {
-                digit = (int)WeekDays.Sunday;
-                Console.WriteLine($"{day} is {digit} day of the week.");
+                int digit = (int)WeekDays.Sunday;
+                return $"{day} is the {digit}th day of the week.";
             }
             else
             {
-                Console.WriteLine("Please check the spelling.");
+                return "Please check the spelling.";
             }
-            
-            //Return week day name by its number
-            Console.WriteLine("Enter the number of week day (1-7):");
-            digit = Convert.ToInt32(Console.ReadLine());
+        }
+
+        static string WDNameByNumber(int digit)
+        {
             switch (digit)
             {
                 case 1:
-                    day = DayOfWeek.Monday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    string day = WeekDays.Monday.ToString();
+                    return $"{digit}st day of the week is {day}.";
                 case 2:
-                    day = DayOfWeek.Tuesday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Tuesday.ToString();
+                    return $"{digit}nd day of the week is {day}.";
                 case 3:
-                    day = DayOfWeek.Wednesday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Wednesday.ToString();
+                    return $"{digit}rd day of the week is {day}.";
                 case 4:
-                    day = DayOfWeek.Thursday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Thursday.ToString();
+                    return $"{digit}th day of the week is {day}.";
                 case 5:
-                    day = DayOfWeek.Friday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Friday.ToString();
+                    return $"{digit}th day of the week is {day}.";
                 case 6:
-                    day = DayOfWeek.Saturday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Saturday.ToString();
+                    return $"{digit}th day of the week is {day}.";
                 case 7:
-                    day = DayOfWeek.Sunday.ToString();
-                    Console.WriteLine($"{digit} day of the week is {day}");
-                    break;
+                    day = WeekDays.Sunday.ToString();
+                    return $"{digit}th day of the week is {day}.";
                 default:
-                    Console.WriteLine("You have typed a non-numeric value or entered value is out of range!");
-                    break;
-            }            
+                    return "You have entered a non-numeric value or entered value is out of range!";
+            }
         }
     }
 }
