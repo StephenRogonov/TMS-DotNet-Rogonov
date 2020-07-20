@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessTrackerApp", "src\Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMApp", "src\ATMApp\ATMApp.csproj", "{7BBEF28C-4CE5-49A6-92FB-8776A3736785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostOfficeQueueApp", "src\PostOffice QueueApp\PostOfficeQueueApp.csproj", "{1949D6B4-39F8-44D4-B7E8-9D464EDC7231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreQueueApp", "src\PostOffice QueueApp\StoreQueueApp.csproj", "{1949D6B4-39F8-44D4-B7E8-9D464EDC7231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
